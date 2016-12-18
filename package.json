@@ -1,0 +1,17 @@
+{
+  "name": "atom-language-microalg",
+  "version": "0.0.0",
+  "description": "MicroAlg pour Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microalg/atom-language-microalg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MicroAlg/atom-language-microalg/issues"
+  },
+  "license": "GPL2"
+}
