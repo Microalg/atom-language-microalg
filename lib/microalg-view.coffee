@@ -16,3 +16,5 @@ class MicroAlgView
   getElement: ->
     @element
 
+  setResult: (src) ->
+    @element.children[0].textContent = src

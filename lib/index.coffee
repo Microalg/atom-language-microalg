@@ -1,5 +1,6 @@
 console.log 'Starting atom-language-microalg'
 MicroAlgView = require './microalg-view'
+EMULISP_CORE = require './emulisp_core'
 {CompositeDisposable} = require 'atom'
 
 module.exports = MicroAlg =
@@ -32,6 +33,9 @@ module.exports = MicroAlg =
     console.log 'MicroAlg exec-ed!'
 
     if !@modalPanel.isVisible()
+      editor = atom.workspace.getActiveTextEditor()
+      result = EMULISP_CORE.eval(editor.getText())
+      @MicroAlgView.setResult(result)
       @modalPanel.show()
 
   hide_result: ->
