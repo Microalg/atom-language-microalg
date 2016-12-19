@@ -3,10 +3,8 @@ class MicroAlgView
   constructor: (serializedState) ->
     @element = document.createElement('div')
     @element.classList.add('microalg')
-    message = document.createElement('div')
-    message.textContent = "MicroAlg is Alive! It's ALIVE!"
-    message.classList.add('message')
-    @element.appendChild(message)
+    @message = document.createElement('div')
+    @element.appendChild(@message)
 
   serialize: ->
 
@@ -17,4 +15,9 @@ class MicroAlgView
     @element
 
   setResult: (src) ->
-    @element.children[0].textContent = src
+    @message.classList = ['message']
+    @message.textContent = src
+
+  setError: (msg) ->
+    @message.classList = ['error']
+    @message.textContent = msg

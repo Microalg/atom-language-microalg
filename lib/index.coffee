@@ -34,8 +34,12 @@ module.exports = MicroAlg =
 
     if !@modalPanel.isVisible()
       editor = atom.workspace.getActiveTextEditor()
-      result = EMULISP_CORE.eval(editor.getText())
-      @MicroAlgView.setResult(result)
+      try
+        var result = EMULISP_CORE.eval(editor.getText())
+        @MicroAlgView.setResult(result)
+      catch e
+        var msg = e.toString()
+        @MicroAlgView.setError(msg)
       @modalPanel.show()
 
   hide_result: ->
