@@ -1,0 +1,18 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'MicroAlg'
+      'submenu': [
+        {
+          'label': 'Exécuter'
+          'command': 'microalg:exec'
+        }
+        {
+          'label': 'Cacher les résultats'
+          'command': 'microalg:hide_result'
+        }
+      ]
+    ]
+  }
+]
