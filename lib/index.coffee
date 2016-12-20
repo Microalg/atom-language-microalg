@@ -35,6 +35,7 @@ module.exports = MicroAlg =
     editor = atom.workspace.getActiveTextEditor()
     try
       EMULISP_CORE.init();
+      EMULISP_CORE.loadLispLocal('microalg.l');
       EMULISP_CORE.eval(editor.getText())
       @MicroAlgView.setResult(EMULISP_CORE.currentState().textToPrint)
     catch e
