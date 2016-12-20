@@ -34,8 +34,9 @@ module.exports = MicroAlg =
 
     editor = atom.workspace.getActiveTextEditor()
     try
-      result = EMULISP_CORE.eval(editor.getText())
-      @MicroAlgView.setResult(result)
+      EMULISP_CORE.init();
+      EMULISP_CORE.eval(editor.getText())
+      @MicroAlgView.setResult(EMULISP_CORE.currentState().textToPrint)
     catch e
       msg = e.toString()
       @MicroAlgView.setError(msg)
