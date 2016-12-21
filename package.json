@@ -1,7 +1,7 @@
 {
   "name": "atom-language-microalg",
   "main": "./lib/index",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MicroAlg pour Atom",
   "engines": {
     "atom": "*"
